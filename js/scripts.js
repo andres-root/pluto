@@ -5,6 +5,7 @@ class Engine {
 		this.canvas = document.getElementById('canvas');
 		this.ctx = canvas.getContext('2d');
 		this.entities = [];
+		this._deferredKill: [];
 		this.factory = {
 			Entity: Entity,
 			Enemy: Enemy
@@ -32,9 +33,16 @@ class Engine {
 			let entity = this.entities[i];
 			if (!entity) {
 				entity.update();
+			} else {
+				this._deferredKill.push(entity);
 			}
+
+			// Remove all killed entities
+			for (var i = 0; i < this._deferredKill.length; i++) {
+				this.entities = this.entities.filter((value) => value != this._deferredKill[i]);
 			}
-		}
+
+			this._deferredKill = [];
 	}
 }
 
@@ -44,11 +52,19 @@ class Entity {
 		this.position = {x: 0, y: 0};
 		this.size = {w: 0, h: 0};
 		this._killed = false;
+		this.currSpriteName = null;
+		this.zindex = 0;
 	}
 
-	update() {
-		return this.i++;
+	update() {}
+
+	draw() {
+		if (this.currSpriteName) {
+			// Draw Sprite
+		}
 	}
+
+
 }
 
 class Enemy extends Entity {
