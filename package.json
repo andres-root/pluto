@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/andres-root/pluto/issues"
   },
-  "homepage": "https://github.com/andres-root/pluto#readme"
+  "homepage": "https://github.com/andres-root/pluto#readme",
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-env": "^1.1.4"
+  }
 }
