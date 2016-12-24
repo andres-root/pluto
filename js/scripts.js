@@ -43,8 +43,10 @@ class Engine {
 			}
 
 			this._deferredKill = [];
+		}
 	}
 }
+
 
 
 class Entity {
