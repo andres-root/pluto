@@ -1,0 +1,19 @@
+{
+  "name": "pluto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andres-root/pluto.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andres-root/pluto/issues"
+  },
+  "homepage": "https://github.com/andres-root/pluto#readme"
+}
